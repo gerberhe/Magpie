@@ -43,7 +43,11 @@ public class Magpie2 {
 			response = "Sounds like a good teach.";
 		} else if (statement.trim().length() == 0) {
 			response = "Say something, por favor amigo.";
-		} else {
+		} else if (statement.indexOf("hello") >= 0) {
+			response = "Hi!";
+		}else if (statement.indexOf("smart") >= 0) {
+			response = "I believe myself to be intelligent, yes.";
+		}else {
 			response = getRandomResponse();
 		}
 		return response;
@@ -67,7 +71,8 @@ public class Magpie2 {
 		} else if (whichResponse == 2) {
 			response = "Do you really think so?";
 		} else if (whichResponse == 3) {
-			response = "You don't say.";
+			response = "You don't say."; 
+			
 		} else if (whichResponse == 4) {
 			response = "No way bro!";
 		} else if (whichResponse == 5) {
